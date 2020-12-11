@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_pig_pink_inner
+  m_Shader: {fileID: 4800000, guid: 0f36fd481064d014d834f76f02a00215, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Float0: -0.62
+    - _RimScale: 0.42
+    - _Rimbias: 0
+    - _Rimpower: 4.38
+    - __dirty: 0
+    m_Colors:
+    - _FresnelColor: {r: 0.38679248, g: 0.24355038, b: 0.16237986, a: 0}
+    - _SpecColor: {r: 0.6415094, g: 0.5719117, b: 0.5719117, a: 0}
+    - _Tint: {r: 0.77254903, g: 0.23529412, b: 0.25820816, a: 0}
+    - _spectint: {r: 0.7735849, g: 0.36124954, b: 0.3741547, a: 0}
