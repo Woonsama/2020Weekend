@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class LobbyCharacter : MonoBehaviour
 {
+    public enum AccessorieType
+    {
+        Hat
+    }
+
     public enum AnimType
     {
         Angry,
@@ -20,9 +25,11 @@ public class LobbyCharacter : MonoBehaviour
     //AnimType, random Anim count
 
     [SerializeField]
-    AnimType _test;
+    GameObject _headSlot;
 
+    Vector3 _hatPostOffset = new Vector3(-1.13f, 0, 0f);
     Dictionary<AnimType, int> _animDic = new Dictionary<AnimType, int>();
+    Dictionary<AccessorieType, string> _boneDic = new Dictionary<AccessorieType, string>();
 
     string _curAnimType;
 
@@ -33,6 +40,9 @@ public class LobbyCharacter : MonoBehaviour
         {
             bav.SetExitAction(OnExitAnimState);
         }
+
+        _boneDic.Add(AccessorieType.Hat, "Character_Head");
+
 
         _animDic.Add(AnimType.Angry, 2);
         _animDic.Add(AnimType.Idle, 1);
@@ -70,6 +80,23 @@ public class LobbyCharacter : MonoBehaviour
         _curAnimType = animName;
 
     }
+    
+    public void CreateAcc(AccessorieType acType,string prefabName)
+    {
+        foreach (Transform transform in _headSlot.transform)
+        {
+            Destroy(transform.gameObject);
+        }
+
+        GameObject loadObj = Resources.Load("Prefab/Acc/" + prefabName) as GameObject;
+        GameObject gameObj = GameObject.Instantiate(loadObj,_headSlot.transform);
+        gameObj.transform.localPosition = new Vector3(0, 0, 0);
+        gameObj.transform.localPosition += _hatPostOffset;
+        gameObj.transform.localEulerAngles = new Vector3(0, 0, 90);
+
+        //gameObj.transform.position = _headSlot.transform.position;
+
+    }
 
     void OnExitAnimState()
     {
@@ -84,12 +111,6 @@ public class LobbyCharacter : MonoBehaviour
         _animator.SetBool(_curAnimType, false);
     }
 
+ 
 
-    private void Update()
-    {
-        if(Input.GetKeyDown("e"))
-        {
-            SetAnim(_test);
-        }
-    }
 }

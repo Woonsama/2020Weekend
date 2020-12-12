@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 3387896266536079089}
-  _test: 0
+  _headSlot: {fileID: 920083440170671799}
 --- !u!1 &8556636049857222408
 GameObject:
   m_ObjectHideFlags: 0
