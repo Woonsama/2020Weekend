@@ -32,16 +32,16 @@ public class SpinningObstacle : MonoBehaviour
         motor.force = 10000.0f;
         SetMotorVelocity(randVel);
         SetjointMotor();
-        StartCoroutine(Test(Random.Range(8.0f, 15.0f)));
+        StartCoroutine(VelChangeTimer(Random.Range(8.0f, 15.0f)));
     }
 
     // Update is called once per frame
-    IEnumerator Test(float waitTime)
+    IEnumerator VelChangeTimer(float waitTime)
     {
         Debug.Log("Courtine");
         yield return new WaitForSeconds(waitTime);
         SetMotorVelocity(-randVel);
         SetjointMotor();
-        StartCoroutine(Test(Random.Range(8.0f, 15.0f)));
+        StartCoroutine(VelChangeTimer(Random.Range(8.0f, 15.0f)));
     }
 }
