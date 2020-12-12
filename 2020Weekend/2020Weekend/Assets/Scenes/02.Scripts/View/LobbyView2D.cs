@@ -24,6 +24,7 @@ public class LobbyView2D : MonoBehaviour
         gameObj.transform.localScale = Vector3.one;
         gameObj.transform.localPosition = Vector3.zero;
         gameObj.transform.rotation = new Quaternion(0, 0, 0, 0);
+        gameObj.GetComponent<LobbyCharacter>().SetAnim(LobbyCharacter.AnimType.Dance);
     }
 
     private void Update()

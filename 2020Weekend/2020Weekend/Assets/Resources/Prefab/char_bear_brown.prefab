@@ -1010,6 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8783168679026922635}
   - component: {fileID: 3387896266536079089}
+  - component: {fileID: 2920261883002982609}
   m_Layer: 0
   m_Name: char_bear_brown
   m_TagString: Untagged
@@ -1055,6 +1056,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2920261883002982609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264041322303508017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63f05c7a3ba9c2448802b42117accdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3387896266536079089}
+  _test: 0
 --- !u!1 &8556636049857222408
 GameObject:
   m_ObjectHideFlags: 0
