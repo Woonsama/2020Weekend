@@ -10,6 +10,9 @@ public class Lobby : MonoBehaviourPunCallbacks
     [Header("Button GameStart")]
     public Button button_GameStart;
 
+    [Header("Disable GameStartObj")]
+    public GameObject disable_startBtn;
+
     private void Awake()
     {
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
@@ -20,8 +23,12 @@ public class Lobby : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-
+        if(Input.GetKeyDown("escape"))
+        {
+            OnClickBackBtn();
+        }
     }
+
 
     #region private
 
@@ -36,7 +43,7 @@ public class Lobby : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
         {
             button_GameStart.enabled = false;
-            button_GameStart.GetComponent<Image>().color = new Color32(128, 128, 128, 255);
+            disable_startBtn.SetActive(true);
         }
     }
 
@@ -53,5 +60,9 @@ public class Lobby : MonoBehaviourPunCallbacks
         }
     }
 
+    public void OnClickBackBtn()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+    }
     #endregion Event
 }
