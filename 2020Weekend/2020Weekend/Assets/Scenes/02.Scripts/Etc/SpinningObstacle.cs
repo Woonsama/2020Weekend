@@ -10,8 +10,6 @@ public class SpinningObstacle : MonoBehaviour
     private float minVel = 50.0f;
     private float randVel;
     
-    
-
     HingeJoint joint;
     JointMotor motor;
 
@@ -38,7 +36,6 @@ public class SpinningObstacle : MonoBehaviour
     // Update is called once per frame
     IEnumerator VelChangeTimer(float waitTime)
     {
-        Debug.Log("Courtine");
         yield return new WaitForSeconds(waitTime);
         SetMotorVelocity(-randVel);
         SetjointMotor();
