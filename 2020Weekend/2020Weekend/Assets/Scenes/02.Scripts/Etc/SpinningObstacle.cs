@@ -9,13 +9,21 @@ public class SpinningObstacle : MonoBehaviour
     private float maxVel = 100.0f;
     private float minVel = 50.0f;
     private float randVel;
-    
+
+    [Range(0, 1)]
+    int variant; 
+
     HingeJoint joint;
     JointMotor motor;
 
-    void SetMotorVelocity(float vel)
+    void SetMotorVelocity()
     {
-        motor.targetVelocity = vel;
+        variant = Random.Range(0, 1);
+
+        if (variant == 0)
+            randVel = -randVel;
+
+        motor.targetVelocity = randVel;
     }
 
     void SetjointMotor()
@@ -26,19 +34,24 @@ public class SpinningObstacle : MonoBehaviour
     void Start()
     {
         joint = GetComponent<HingeJoint>();
-        randVel = Random.Range(maxVel, minVel);
+        randVel = minVel;        
         motor.force = 10000.0f;
-        SetMotorVelocity(randVel);
+        SetMotorVelocity();
         SetjointMotor();
-        StartCoroutine(VelChangeTimer(Random.Range(8.0f, 15.0f)));
+        StartCoroutine(VelChangeTimer(15.0f));
     }
 
     // Update is called once per frame
     IEnumerator VelChangeTimer(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        SetMotorVelocity(-randVel);
+
+        if (randVel > 0)
+            randVel = Random.Range(randVel, maxVel);
+        else
+            randVel = Random.Range(randVel, -maxVel);
+        SetMotorVelocity();
         SetjointMotor();
-        StartCoroutine(VelChangeTimer(Random.Range(8.0f, 15.0f)));
+        StartCoroutine(VelChangeTimer(Random.Range(10.0f, 15.0f)));
     }
 }
