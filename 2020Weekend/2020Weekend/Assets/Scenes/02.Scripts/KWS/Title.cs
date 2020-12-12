@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviourPunCallbacks
 {
@@ -24,6 +25,7 @@ public class Title : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        Screen.SetResolution(1920, 1080, false);
         DontDestroyOnLoad(titleAndLobbyObj);
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
     }
@@ -42,20 +44,13 @@ public class Title : MonoBehaviourPunCallbacks
 
     private void OnClick_GameStart()
     {
-        if(PhotonNetwork.IsConnected)
-        {
-            PhotonNetwork.JoinRandomRoom();
-        }
-        else
-        {
-            //PhotonNetwork.GameVersion
-            PhotonNetwork.ConnectUsingSettings();
-        }
+        PhotonNetwork.ConnectUsingSettings();
     }
 
     public override void OnConnectedToMaster()
     {
         Debug.Log("서버 연결 성공");
+        PhotonNetwork.JoinRandomRoom();
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -66,12 +61,15 @@ public class Title : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("방 참가 성공");
+
+        SceneManager.LoadScene("LobbyTest");
+        
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         Debug.Log("방 참가 실패");
-        PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = maxPlayer });
+        PhotonNetwork.CreateRoom("LobbyTest", new RoomOptions { MaxPlayers = maxPlayer });
     }
 
     #endregion Event
