@@ -2,211 +2,211 @@
   <ACC>
     <index>1001</index>
     <prefabName>m_BachelorHat01</prefabName>
-    <listImageName>m_BachelorHat01_listImage</listImageName>
+    <listImageName>BachelorHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>위크엔드 졸업모자</itemName>
   </ACC>
   <ACC>
     <index>1002</index>
     <prefabName>m_BaseballHat01</prefabName>
-    <listImageName>m_BaseballHat01_listImage</listImageName>
+    <listImageName>BaseballHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>류현진 사촌의 볼캡</itemName>
   </ACC>
   <ACC>
     <index>1003</index>
     <prefabName>m_BeerHat01</prefabName>
-    <listImageName>m_BeerHat01_listImage</listImageName>
+    <listImageName>BeerHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>히키코모리 콜라모자</itemName>
   </ACC>
   <ACC>
     <index>1004</index>
     <prefabName>m_Bunnyears01</prefabName>
-    <listImageName>m_Bunnyears01_listImage</listImageName>
+    <listImageName>Bunnyears01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>리카노의 외출용 모자</itemName>
   </ACC>
   <ACC>
     <index>1005</index>
     <prefabName>m_CandleHat01</prefabName>
-    <listImageName>m_CandleHat01_listImage</listImageName>
+    <listImageName>CandleHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>베릴은 14살</itemName>
   </ACC>
   <ACC>
     <index>1006</index>
     <prefabName>m_ChefHat01</prefabName>
-    <listImageName>m_ChefHat01_listImage</listImageName>
+    <listImageName>ChefHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>옥수수의 제빵모</itemName>
   </ACC>
   <ACC>
     <index>1007</index>
     <prefabName>m_Coin01</prefabName>
-    <listImageName>m_Coin01_listImage</listImageName>
+    <listImageName>Coin01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>비트코인</itemName>
   </ACC>
   <ACC>
     <index>1008</index>
     <prefabName>m_CowboyHat01</prefabName>
-    <listImageName>m_CowboyHat01_listImage</listImageName>
+    <listImageName>CowboyHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>맥크리의 겉멋용 모자</itemName>
   </ACC>
   <ACC>
     <index>1009</index>
     <prefabName>m_CrownHat01</prefabName>
-    <listImageName>m_CrownHat01_listImage</listImageName>
+    <listImageName>CrownHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>너구리의 왕</itemName>
   </ACC>
   <ACC>
     <index>1010</index>
     <prefabName>m_CylinderHat01</prefabName>
-    <listImageName>m_CylinderHat01_listImage</listImageName>
+    <listImageName>CylinderHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>이 안에 새 있다</itemName>
   </ACC>
   <ACC>
     <index>1011</index>
     <prefabName>m_ElephantHat01</prefabName>
-    <listImageName>m_ElephantHat01_listImage</listImageName>
+    <listImageName>ElephantHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>저 코끼리 맞는데</itemName>
   </ACC>
   <ACC>
     <index>1012</index>
     <prefabName>m_FanHat01</prefabName>
-    <listImageName>m_FanHat01_listImage</listImageName>
+    <listImageName>FanHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>헬리콥터 모자</itemName>
   </ACC>
   <ACC>
     <index>1013</index>
     <prefabName>m_FeatherHat01</prefabName>
-    <listImageName>m_FeatherHat01_listImage</listImageName>
+    <listImageName>FeatherHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>인디언 라이언</itemName>
   </ACC>
   <ACC>
     <index>1014</index>
     <prefabName>m_FirefighterHat01</prefabName>
-    <listImageName>m_FirefighterHat01_listImage</listImageName>
+    <listImageName>FirefighterHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>오늘은 내가 소방관</itemName>
   </ACC>
   <ACC>
     <index>1015</index>
     <prefabName>m_FlamingoHat01</prefabName>
-    <listImageName>m_FlamingoHat01_listImage</listImageName>
+    <listImageName>FlamingoHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>홍학모자</itemName>
   </ACC>
   <ACC>
     <index>1016</index>
     <prefabName>m_FrenchHat01</prefabName>
-    <listImageName>m_FrenchHat01_listImage</listImageName>
+    <listImageName>FrenchHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>오늘만 피카소</itemName>
   </ACC>
   <ACC>
     <index>1017</index>
     <prefabName>m_FruitHat01</prefabName>
-    <listImageName>m_FruitHat01_listImage</listImageName>
+    <listImageName>FruitHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>오늘 아침밥</itemName>
   </ACC>
   <ACC>
     <index>1018</index>
     <prefabName>m_HardHat01</prefabName>
-    <listImageName>m_HardHat01_listImage</listImageName>
+    <listImageName>HardHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>정비공</itemName>
   </ACC>
   <ACC>
     <index>1019</index>
     <prefabName>m_MushroomHat01</prefabName>
-    <listImageName>m_MushroomHat01_listImage</listImageName>
+    <listImageName>MushroomHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>빨간 요시 알</itemName>
   </ACC>
   <ACC>
     <index>1020</index>
     <prefabName>m_PartyHat01</prefabName>
-    <listImageName>m_PartyHat01_listImage</listImageName>
+    <listImageName>PartyHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>줄리아의 마술용품</itemName>
   </ACC>
   <ACC>
     <index>1021</index>
     <prefabName>m_PharaohHat01</prefabName>
-    <listImageName>m_PharaohHat01_listImage</listImageName>
+    <listImageName>Pharaohhat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>파라오 모자</itemName>
   </ACC>
   <ACC>
     <index>1022</index>
     <prefabName>m_PirateHat01</prefabName>
-    <listImageName>m_PirateHat01_listImage</listImageName>
+    <listImageName>PirateHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>나폴레옹</itemName>
   </ACC>
   <ACC>
     <index>1023</index>
     <prefabName>m_SantaHat01</prefabName>
-    <listImageName>m_SantaHat01_listImage</listImageName>
+    <listImageName>SantaHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>산타 일용직</itemName>
   </ACC>
   <ACC>
     <index>1024</index>
     <prefabName>m_ShamanHat01</prefabName>
-    <listImageName>m_ShamanHat01_listImage</listImageName>
+    <listImageName>ShamanHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>간지 작살 모자</itemName>
   </ACC>
   <ACC>
     <index>1025</index>
     <prefabName>m_SharkHat01</prefabName>
-    <listImageName>m_SharkHat01_listImage</listImageName>
+    <listImageName>SharkHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>아빠 상어</itemName>
   </ACC>
   <ACC>
     <index>1026</index>
     <prefabName>m_SombreroHat01</prefabName>
-    <listImageName>m_SombreroHat01_listImage</listImageName>
+    <listImageName>SombreroHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>멕시코 모자</itemName>
   </ACC>
   <ACC>
     <index>1027</index>
     <prefabName>m_SpiderHat01</prefabName>
-    <listImageName>m_SpiderHat01_listImage</listImageName>
+    <listImageName>SpiderHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>타란 튤라</itemName>
   </ACC>
   <ACC>
     <index>1028</index>
     <prefabName>m_UmbrellaHat01</prefabName>
-    <listImageName>m_UmbrellaHat01_listImage</listImageName>
+    <listImageName>UmbrellaHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>머리는 우산꽂이</itemName>
   </ACC>
   <ACC>
     <index>1029</index>
     <prefabName>m_UnicornHat01</prefabName>
-    <listImageName>m_UnicornHat01_listImage</listImageName>
+    <listImageName>UnicornHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>디그닥 다그닥</itemName>
   </ACC>
   <ACC>
     <index>1030</index>
     <prefabName>m_WitchHat01</prefabName>
-    <listImageName>m_WitchHat01_listImage</listImageName>
+    <listImageName>WitchHat01</listImageName>
     <accType>0</accType>
-    <itemName>None</itemName>
+    <itemName>아브라카다브라</itemName>
   </ACC>
 </read>

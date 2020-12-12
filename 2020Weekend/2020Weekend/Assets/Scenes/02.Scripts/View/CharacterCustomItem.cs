@@ -27,7 +27,7 @@ public class CharacterCustomItem : MonoBehaviour
     public void Init(UIData data)
     {
         _uiData = data;
-        _image.sprite = Resources.Load<Sprite>("Prefab/Acc/" + data.iconName);
+        _image.sprite = Resources.Load<Sprite>("Sprite/" + data.iconName);
         _text.text = data.itemName;
         _onClickAction = data.onClick;
     }

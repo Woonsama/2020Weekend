@@ -1473,6 +1473,8 @@ GameObject:
   - component: {fileID: 8818496292035114981}
   - component: {fileID: 3207050513311329695}
   - component: {fileID: 4390018545862093468}
+  - component: {fileID: -4760431337554155191}
+  - component: {fileID: 1102288516409168546}
   m_Layer: 0
   m_Name: char_monkey
   m_TagString: Untagged
@@ -1532,6 +1534,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 3207050513311329695}
   _headSlot: {fileID: 1099240894368923097}
+--- !u!114 &-4760431337554155191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1102288516409168546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1 &8447281618567836774
 GameObject:
   m_ObjectHideFlags: 0

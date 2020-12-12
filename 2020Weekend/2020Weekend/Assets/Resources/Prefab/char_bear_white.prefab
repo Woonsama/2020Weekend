@@ -700,6 +700,8 @@ GameObject:
   - component: {fileID: 4470843255611801897}
   - component: {fileID: 7560290968437300051}
   - component: {fileID: -4182480172328919778}
+  - component: {fileID: 776678777895532054}
+  - component: {fileID: -3470383227739776537}
   m_Layer: 0
   m_Name: char_bear_white
   m_TagString: Untagged
@@ -759,6 +761,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 7560290968437300051}
   _headSlot: {fileID: 5416561668544678677}
+--- !u!114 &776678777895532054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837191043506314131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-3470383227739776537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837191043506314131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1 &4076523580513201367
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class LobbyCharacter : MonoBehaviour
+using Photon;
+using Photon.Realtime;
+public class LobbyCharacter : Photon.Pun.MonoBehaviourPunCallbacks
 {
     public enum AccessorieType
     {

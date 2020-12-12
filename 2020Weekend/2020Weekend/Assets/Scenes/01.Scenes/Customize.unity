@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 643675574}
   - component: {fileID: 643675573}
   m_Layer: 0
-  m_Name: LobbyView2d
+  m_Name: LobbyCustomView2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1537,6 +1537,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 417009139}
     m_Modifications:
+    - target: {fileID: -4760431337554155191, guid: f351314685d8905478ffb58f33dbcc81,
+        type: 3}
+      propertyPath: viewIdField
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 798730649440734691, guid: f351314685d8905478ffb58f33dbcc81,
         type: 3}
       propertyPath: m_Layer
@@ -2295,7 +2300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1025004111
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2512,6 +2517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309421641537539038, guid: 34b7cc30623e27742a06e064dd52aa86,
+        type: 3}
+      propertyPath: viewIdField
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5603214848857890046, guid: 34b7cc30623e27742a06e064dd52aa86,
         type: 3}
@@ -3732,6 +3742,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 776678777895532054, guid: a5c2db572ed76fb41bd6937f392f19d5,
+        type: 3}
+      propertyPath: viewIdField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1000365850303062986, guid: a5c2db572ed76fb41bd6937f392f19d5,
         type: 3}
       propertyPath: m_Layer
@@ -4227,7 +4242,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1834322154}
   - component: {fileID: 1834322157}
-  - component: {fileID: 1834322156}
   - component: {fileID: 1834322155}
   m_Layer: 5
   m_Name: Scroll View
@@ -4254,8 +4268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 474, y: -83}
-  m_SizeDelta: {x: 850, y: 700}
+  m_AnchoredPosition: {x: 503.36, y: -39.6}
+  m_SizeDelta: {x: 850, y: 658.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834322155
 MonoBehaviour:
@@ -4279,7 +4293,7 @@ MonoBehaviour:
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 413184349}
   m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 1025004112}
+  m_VerticalScrollbar: {fileID: 0}
   m_HorizontalScrollbarVisibility: 2
   m_VerticalScrollbarVisibility: 2
   m_HorizontalScrollbarSpacing: -3
@@ -4287,35 +4301,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1834322156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834322153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1834322157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4337,6 +4322,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 417009139}
     m_Modifications:
+    - target: {fileID: -8539631455363813550, guid: f72737d75a2c1944985d4fb1ce6e026b,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 74098806561834261, guid: f72737d75a2c1944985d4fb1ce6e026b,
         type: 3}
       propertyPath: m_Layer
