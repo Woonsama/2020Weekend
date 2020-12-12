@@ -14,6 +14,9 @@ public class LobbyCustomView2D : MonoBehaviour
 
     LobbyCharacter _lobbyCharacter;
 
+    int _currentSelectItemIndex = -1;
+    Dictionary<int, CharacterCustomItem> _itemDic = new Dictionary<int, CharacterCustomItem>();
+
     private void Awake()
     {
         InitAccListItems();
@@ -53,6 +56,7 @@ public class LobbyCustomView2D : MonoBehaviour
 
     public void InitAccListItems()
     {
+        var curUserData = UserManager.Instance.GetCurUserData();
         List<CharacterCustomItem.UIData> datas = new List<CharacterCustomItem.UIData>();
         var xmlDoc = XmlHelper.LoadXML("AccTable");
         XmlNodeList all_nodes = xmlDoc.SelectNodes("read/ACC");
@@ -75,7 +79,16 @@ public class LobbyCustomView2D : MonoBehaviour
 
             GameObject loadObj = Resources.Load("Prefab/CharacterCustomItem") as GameObject;
             GameObject gameObj = GameObject.Instantiate(loadObj, _gridObj.transform);
-            gameObj.GetComponent<CharacterCustomItem>().Init(uiData);
+            var cci = gameObj.GetComponent<CharacterCustomItem>();
+            cci.Init(uiData);
+
+            _itemDic[uiData.index] = cci;
+
+            if(uiData.prefabName == curUserData.setHatPrefabName)
+            {
+                cci.HighlightItem();
+                _currentSelectItemIndex = uiData.index;
+            }
 
         }
 
@@ -84,8 +97,13 @@ public class LobbyCustomView2D : MonoBehaviour
 
     }
 
-    public void OnClickAccItem(LobbyCharacter.AccessorieType acType, string prefabName)
+    public void OnClickAccItem(LobbyCharacter.AccessorieType acType, string prefabName,int index)
     {
+        if(_currentSelectItemIndex != -1)
+        {
+            _itemDic[_currentSelectItemIndex].DisHighlightItem();
+        }
+
         if(_lobbyCharacter == null)
         {
             foreach(Transform tr in _characterRoot.transform)
@@ -105,21 +123,33 @@ public class LobbyCustomView2D : MonoBehaviour
             _lobbyCharacter.CreateAcc(acType, prefabName);
             UserManager.Instance.SetHatData(prefabName);
         }
+
+        _currentSelectItemIndex = index;
+        _itemDic[_currentSelectItemIndex].HighlightItem();
     }
 
+    public void OnResponseLeftArrow()
+    {
+        if(_lobbyCharacter !=null)        
+            _lobbyCharacter.transform.Rotate(new Vector3(0,20,0));
+    }
+
+    public void OnResponseRightArrow()
+    {
+        if (_lobbyCharacter != null)
+            _lobbyCharacter.transform.Rotate(new Vector3(0, -20, 0));
+    }
 
     private void Update()
     {
-        if (_lobbyCharacter != null)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-                _lobbyCharacter.transform.Rotate(Vector3.up * 100f * Time.deltaTime);
 
-            if (Input.GetKey(KeyCode.RightArrow))
-                _lobbyCharacter.transform.Rotate(-Vector3.up * 100f * Time.deltaTime);
-        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+            OnResponseLeftArrow();
 
-        if(Input.GetKeyDown("escape"))
+        if (Input.GetKey(KeyCode.RightArrow))
+            OnResponseRightArrow();
+
+        if (Input.GetKeyDown("escape"))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
         }
