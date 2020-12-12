@@ -118,5 +118,10 @@ public class LobbyCustomView2D : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow))
                 _lobbyCharacter.transform.Rotate(-Vector3.up * 100f * Time.deltaTime);
         }
+
+        if(Input.GetKeyDown("escape"))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+        }
     }
 }

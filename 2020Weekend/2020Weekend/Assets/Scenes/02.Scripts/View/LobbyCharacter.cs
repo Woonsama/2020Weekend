@@ -93,7 +93,7 @@ public class LobbyCharacter : Photon.Pun.MonoBehaviourPunCallbacks
         GameObject gameObj = GameObject.Instantiate(loadObj,_headSlot.transform);
         gameObj.transform.localPosition = new Vector3(0, 0, 0);
         gameObj.transform.localPosition += _hatPostOffset;
-        gameObj.transform.localEulerAngles = new Vector3(0, 0, 90);
+        gameObj.transform.localEulerAngles = new Vector3(-73f, 175, -85);
 
         //gameObj.transform.position = _headSlot.transform.position;
 

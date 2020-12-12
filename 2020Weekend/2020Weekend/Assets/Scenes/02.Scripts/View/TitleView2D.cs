@@ -6,8 +6,8 @@ public class TitleView2D : MonoBehaviour
 {
 
 
-    public void OnClickStartBtn()
+    public void OnClickCustomBtn()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Lobby");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Customize");
     }
 }
