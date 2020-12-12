@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 635339605}
   - component: {fileID: 635339607}
   - component: {fileID: 635339606}
+  - component: {fileID: 635339608}
   m_Layer: 5
   m_Name: Image_Logo
   m_TagString: Untagged
@@ -285,7 +286,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1945834724}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.9837421}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -328,6 +329,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635339604}
   m_CullTransparentMesh: 0
+--- !u!111 &635339608
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635339604}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a20592384a042324a83e1c3b102db647, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a20592384a042324a83e1c3b102db647, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &734679989
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +777,7 @@ GameObject:
   - component: {fileID: 1074375562}
   - component: {fileID: 1074375564}
   - component: {fileID: 1074375563}
+  - component: {fileID: 1074375565}
   m_Layer: 5
   m_Name: Image_BG
   m_TagString: Untagged
@@ -820,6 +838,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074375561}
   m_CullTransparentMesh: 0
+--- !u!111 &1074375565
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074375561}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0b1ac9e9c289cdd43924994858e4af03, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0b1ac9e9c289cdd43924994858e4af03, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1250962432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1357,7 @@ GameObject:
   - component: {fileID: 1980870461}
   - component: {fileID: 1980870460}
   - component: {fileID: 1980870459}
+  - component: {fileID: 1980870462}
   m_Layer: 5
   m_Name: Button_Start
   m_TagString: Untagged
@@ -1440,3 +1475,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980870457}
   m_CullTransparentMesh: 0
+--- !u!111 &1980870462
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980870457}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: fa679abafcd20324e9eda05e2677dd22, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fa679abafcd20324e9eda05e2677dd22, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

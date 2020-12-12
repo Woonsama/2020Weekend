@@ -23,11 +23,14 @@ public class Title : MonoBehaviourPunCallbacks
     [Header("AudioSource")]
     public GameObject titleAndLobbyObj;
 
+    private Animation gameStartAnim;
+
     private void Awake()
     {
         Screen.SetResolution(1920, 1080, false);
         DontDestroyOnLoad(titleAndLobbyObj);
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
+        gameStartAnim = button_GameStart.GetComponent<Animation>();
     }
 
     #region private
@@ -44,7 +47,17 @@ public class Title : MonoBehaviourPunCallbacks
 
     private void OnClick_GameStart()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        gameStartAnim.Play("ui_titlestart");
+
+        //if(PhotonNetwork.IsConnected)
+        //{
+        //    PhotonNetwork.JoinRandomRoom();
+        //}
+        //else
+        {
+            PhotonNetwork.ConnectUsingSettings();
+        }
+
     }
 
     public override void OnConnectedToMaster()
@@ -61,9 +74,7 @@ public class Title : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("방 참가 성공");
-
-        SceneManager.LoadScene("LobbyTest");
-        
+        PhotonNetwork.LoadLevel("LobbyTest");   
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
