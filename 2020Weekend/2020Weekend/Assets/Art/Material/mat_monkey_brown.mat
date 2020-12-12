@@ -25,8 +25,10 @@ Material:
     - _Rimbias: 0
     - _Rimpower: 2.59
     - __dirty: 0
+    - _outlinewidth: 0.05
     m_Colors:
     - _FresnelColor: {r: 0.7075472, g: 0.43397748, b: 0.36378607, a: 0}
     - _SpecColor: {r: 0.6415094, g: 0.5719117, b: 0.5719117, a: 0}
     - _Tint: {r: 0.1981132, g: 0.0670501, b: 0.023362402, a: 0}
+    - _outlinecolor: {r: 0.5471698, g: 0.15744035, b: 0.18729904, a: 0}
     - _spectint: {r: 0.2924528, g: 0.16002135, b: 0.040005345, a: 0}
