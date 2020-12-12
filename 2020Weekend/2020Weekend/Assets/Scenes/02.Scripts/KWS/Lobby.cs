@@ -14,17 +14,23 @@ public class Lobby : MonoBehaviourPunCallbacks
     {
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
 
-        Init();
+        InitData();
+        InitUI();
     }
 
     private void Update()
     {
-        
+
     }
 
     #region private
 
-    private void Init()
+    private void InitData()
+    {
+        
+    }
+
+    private void InitUI()
     {
         //Set GameStart Color And Enabled
         if (!PhotonNetwork.IsMasterClient)
@@ -32,7 +38,6 @@ public class Lobby : MonoBehaviourPunCallbacks
             button_GameStart.enabled = false;
             button_GameStart.GetComponent<Image>().color = new Color32(128, 128, 128, 255);
         }
-
     }
 
 
