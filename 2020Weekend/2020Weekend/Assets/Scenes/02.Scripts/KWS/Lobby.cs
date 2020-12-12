@@ -11,6 +11,9 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     [Header("Button GameStart")]
     public Button button_GameStart;
 
+    [Header("Button Back")]
+    public Button button_Back;  
+    
     [Header("Button Change Sprite")]
     public Sprite sprite_GameStart_Enable;
     public Sprite sprite_GameStart_Disable;
@@ -26,7 +29,7 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     public Text text_StartDelayText;
 
     [Header("시작 대기 시간")]
-    private float startDelayTime = 3;
+    private float startDelayTime = 4;
 
     private PhotonView pv;
 
@@ -36,6 +39,7 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     {
         pv = GetComponent<PhotonView>();
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
+        button_Back.onClick?.AddListener(OnClickBackBtn);
 
         InitData();
         InitUI();
@@ -78,37 +82,45 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
         //Set GameStart Color And Enabled
         if (!PhotonNetwork.IsMasterClient)
         {
-            button_GameStart.GetComponent<Image>().sprite = sprite_GameStart_Enable;
-            button_GameStart.enabled = true;
-        }
-        else
-        {
             button_GameStart.GetComponent<Image>().sprite = sprite_GameStart_Disable;
             button_GameStart.enabled = false;
         }
+        else
+        {
+            button_GameStart.GetComponent<Image>().sprite = sprite_GameStart_Enable;
+            button_GameStart.enabled = true;
+        }
     }
+
+    private IEnumerator GameStart_Coroutine()
+    {
+        yield return StartCoroutine(StartTime());
+        GoToGameScene();
+    }
+
+    private float currentLeftTime;
 
     private IEnumerator StartTime()
     {
-        text_PlayerCount.gameObject.SetActive(false);
-        text_StartDelayText.gameObject.SetActive(true);
+        text_PlayerCount.enabled = false;
+        text_StartDelayText.enabled = true;
 
-        int currentLeftTime;
+        currentLeftTime = startDelayTime;
 
-        while(startDelayTime <= 0)
+        while(currentLeftTime >= 0)
         {
+            Debug.Log(startDelayTime);
+
             startDelayTime -= Time.deltaTime;
             currentLeftTime = (int)startDelayTime + 1;
-            text_StartDelayText.text = currentLeftTime.ToString();
+            text_StartDelayText.text = (currentLeftTime + 1).ToString();
             yield return null;
         }
-
-        GoToGameScene();
     }
 
     private void GoToGameScene()
     {
-        SceneManager.LoadScene("InGameTest");
+        PhotonNetwork.LoadLevel("InGameTest");
     }
 
     #endregion private
@@ -117,28 +129,30 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
 
     private void OnClick_GameStart()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            StartCoroutine(StartTime());
-        }
+        StartCoroutine(GameStart_Coroutine());
     }
 
     public void OnClickBackBtn()
     {
-        SceneManager.LoadScene("Kws_Title_Test");
+        Destroy(GameObject.Find("TitleAndLobbySource"));
+        PhotonNetwork.Disconnect();
+        PhotonNetwork.LoadLevel("Kws_Title_Test");
+        //SceneManager.LoadScene("Kws_Title_Test");
     }
 
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if(stream.IsWriting)
         {
-            stream.SendNext(currentPlayerCount);
             stream.SendNext(startDelayTime);
+            stream.SendNext(currentPlayerCount);
+            stream.SendNext(currentLeftTime);
         }
         else
         {
-            currentPlayerCount = (int)stream.ReceiveNext();
             startDelayTime = (float)stream.ReceiveNext();
+            currentPlayerCount = (int)stream.ReceiveNext();
+            currentLeftTime = (float)stream.ReceiveNext();
         }
     }
 

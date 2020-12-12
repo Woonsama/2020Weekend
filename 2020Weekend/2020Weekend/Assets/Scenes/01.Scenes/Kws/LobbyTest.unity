@@ -281,10 +281,10 @@ RectTransform:
   - {fileID: 1909453637}
   - {fileID: 598747474}
   - {fileID: 677498273}
-  - {fileID: 467378819}
   - {fileID: 1452160634}
   - {fileID: 1983090119}
   - {fileID: 313761413}
+  - {fileID: 467378819}
   - {fileID: 1392242288}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button_GameStart: {fileID: 677498274}
+  button_Back: {fileID: 598747475}
   sprite_GameStart_Enable: {fileID: 21300000, guid: d9ddcb854cc27b6418ce5aaf0fa35b13,
     type: 3}
   sprite_GameStart_Disable: {fileID: 21300000, guid: a37d16df598047f4590a7cf57aa05b77,
@@ -437,7 +438,7 @@ RectTransform:
   - {fileID: 1708237593}
   - {fileID: 1638764914}
   m_Father: {fileID: 186635940}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -632,7 +633,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 186635940}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -852,6 +853,7 @@ GameObject:
   - component: {fileID: 677498275}
   - component: {fileID: 677498274}
   - component: {fileID: 677498277}
+  - component: {fileID: 677498278}
   m_Layer: 5
   m_Name: GameStartBtn
   m_TagString: Untagged
@@ -972,6 +974,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0.5
+--- !u!111 &677498278
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677498272}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 97efe09e28045984e83211b05a07f46c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 97efe09e28045984e83211b05a07f46c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &838972198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1392242285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392242284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -1222,7 +1240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: 49}
+  m_AnchoredPosition: {x: -28, y: 204}
   m_SizeDelta: {x: 302.53723, y: 175.13162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1452160633
@@ -1236,6 +1254,7 @@ GameObject:
   - component: {fileID: 1452160634}
   - component: {fileID: 1452160636}
   - component: {fileID: 1452160635}
+  - component: {fileID: 1452160637}
   m_Layer: 5
   m_Name: EndDes
   m_TagString: Untagged
@@ -1255,7 +1274,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 186635940}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1299,6 +1318,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452160633}
   m_CullTransparentMesh: 0
+--- !u!111 &1452160637
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452160633}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7bfaca81e8a8b9f4e81a8eb48499da14, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7bfaca81e8a8b9f4e81a8eb48499da14, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1638764913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1693,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 186635940}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
