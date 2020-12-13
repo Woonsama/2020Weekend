@@ -47,6 +47,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
             // read inputs
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
+
+            Debug.Log(h + "," + v);
+
             bool crouch = Input.GetKey(KeyCode.C);
 
             // calculate move direction to pass to character

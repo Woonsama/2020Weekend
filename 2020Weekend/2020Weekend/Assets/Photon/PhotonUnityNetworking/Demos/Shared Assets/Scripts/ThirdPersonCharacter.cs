@@ -51,10 +51,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 			// direction.
 			if (move.magnitude > 1f) move.Normalize();
 			move = transform.InverseTransformDirection(move);
+			Debug.Log("[InverseTransformDirection] : " +  move);
 			CheckGroundStatus();
 			move = Vector3.ProjectOnPlane(move, m_GroundNormal);
+			Debug.Log("[ProjectOnPlane] : " +  move);		
 			m_TurnAmount = Mathf.Atan2(move.x, move.z);
+			Debug.Log("[Atan2] : " +  m_TurnAmount);
+			
 			m_ForwardAmount = move.z;
+			Debug.Log("[forwardAmount] : " +  move.z);
+			
 
 			ApplyExtraTurnRotation();
 
