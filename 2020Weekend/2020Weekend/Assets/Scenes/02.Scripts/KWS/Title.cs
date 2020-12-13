@@ -20,6 +20,10 @@ public class Title : MonoBehaviourPunCallbacks
     [Header("최대로 접속 가능한 인원")]
     private byte maxPlayer;
 
+    [Header("커스터마이즈 버튼")]
+
+    public Button button_Customize;
+
     [Header("AudioSource")]
     public GameObject titleAndLobbyObj;
 
@@ -31,6 +35,7 @@ public class Title : MonoBehaviourPunCallbacks
         DontDestroyOnLoad(titleAndLobbyObj);
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
         gameStartAnim = button_GameStart.GetComponent<Animation>();
+        button_Customize.onClick?.AddListener(OnClick_Customize);
     }
 
     #region private
@@ -58,6 +63,11 @@ public class Title : MonoBehaviourPunCallbacks
             PhotonNetwork.ConnectUsingSettings();
         }
 
+    }
+
+    private void OnClick_Customize()
+    {
+        SceneManager.LoadScene("Customize");
     }
 
     public override void OnConnectedToMaster()

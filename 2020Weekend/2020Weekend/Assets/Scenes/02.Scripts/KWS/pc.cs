@@ -33,7 +33,7 @@ public class pc : MonoBehaviourPunCallbacks
     {
         Debug.Log(pv.IsMine);
 
-        //if (pv.IsMine)
+        if (pv.IsMine)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -55,7 +55,7 @@ public class pc : MonoBehaviourPunCallbacks
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //if(pv.IsMine)
+                if(pv.IsMine)
                 isJumpButtonPressed = true;
             }
         }
@@ -66,9 +66,8 @@ public class pc : MonoBehaviourPunCallbacks
     {
         if(isJumpButtonPressed)
         {
-            //if(pv.IsMine)
-            //pv.RPC("Jump", RpcTarget.AllBuffered);
-            Jump();
+            if(pv.IsMine)
+            pv.RPC("Jump", RpcTarget.AllBuffered);
         }
     }
 
@@ -80,10 +79,10 @@ public class pc : MonoBehaviourPunCallbacks
 
     #region private
 
-    //[PunRPC]
+    [PunRPC]
     private void Jump()
     {
-        //if(pv.IsMine)
+        if(pv.IsMine)
         {
             rigid.velocity = Vector3.zero;
             rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);

@@ -151,7 +151,7 @@ public class LobbyCustomView2D : MonoBehaviour
 
         if (Input.GetKeyDown("escape"))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Kws_Title_Test");
         }
     }
 }

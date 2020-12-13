@@ -34,10 +34,13 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     private PhotonView pv;
 
     private int currentPlayerCount;
+    private float currentLeftTime;
+    bool isGameStart;
 
     private void Awake()
     {
         pv = GetComponent<PhotonView>();
+        Debug.Log(pv.IsMine);
         button_GameStart.onClick?.AddListener(OnClick_GameStart);
         button_Back.onClick?.AddListener(OnClickBackBtn);
 
@@ -48,6 +51,20 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     private void Update()
     {
         SetConnectPlayerCount();
+
+        if(isGameStart)
+        {
+            if(currentLeftTime >= 0)
+            {
+                currentLeftTime -= Time.deltaTime;
+                text_StartDelayText.text = ((int)currentLeftTime + 1).ToString();
+            }
+            else
+            {
+                isGameStart = false;
+                GoToGameScene();
+            }
+        }
 
         if (Input.GetKeyDown("escape"))
         {
@@ -60,6 +77,7 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
 
     private void InitData()
     {
+        currentLeftTime = startDelayTime;
         
     }
 
@@ -74,7 +92,6 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     {
         currentPlayerCount = PhotonNetwork.PlayerList.Length;
         text_PlayerCount.text = currentPlayerCount + "/" + 8;
-        //text_PlayerCount.text = PhotonNetwork.PlayerList.Length + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
     }
 
     private void SetGameStartButtonImage()
@@ -92,35 +109,13 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-    private IEnumerator GameStart_Coroutine()
-    {
-        yield return StartCoroutine(StartTime());
-        GoToGameScene();
-    }
 
-    private float currentLeftTime;
 
-    private IEnumerator StartTime()
-    {
-        text_PlayerCount.enabled = false;
-        text_StartDelayText.enabled = true;
-
-        currentLeftTime = startDelayTime;
-
-        while(currentLeftTime >= 0)
-        {
-            Debug.Log(startDelayTime);
-
-            startDelayTime -= Time.deltaTime;
-            currentLeftTime = (int)startDelayTime + 1;
-            text_StartDelayText.text = (currentLeftTime + 1).ToString();
-            yield return null;
-        }
-    }
 
     private void GoToGameScene()
     {
-        PhotonNetwork.LoadLevel("InGameTest");
+        Destroy(GameObject.Find("TitleAndLobbySource"));
+        PhotonNetwork.LoadLevel("test_2");
     }
 
     #endregion private
@@ -129,7 +124,21 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
 
     private void OnClick_GameStart()
     {
-        StartCoroutine(GameStart_Coroutine());
+        currentLeftTime = startDelayTime;
+        isGameStart = true;
+
+
+        pv.RPC("SetTextInfo", RpcTarget.AllBuffered);
+    }
+
+    [PunRPC]
+    public void SetTextInfo()
+    {
+        image_Delay.gameObject.SetActive(false);
+        image_Start.gameObject.SetActive(true);
+
+        text_PlayerCount.enabled = false;
+        text_StartDelayText.enabled = true;
     }
 
     public void OnClickBackBtn()
@@ -137,7 +146,6 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
         Destroy(GameObject.Find("TitleAndLobbySource"));
         PhotonNetwork.Disconnect();
         PhotonNetwork.LoadLevel("Kws_Title_Test");
-        //SceneManager.LoadScene("Kws_Title_Test");
     }
 
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -147,12 +155,14 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
             stream.SendNext(startDelayTime);
             stream.SendNext(currentPlayerCount);
             stream.SendNext(currentLeftTime);
+            stream.SendNext(isGameStart);
         }
         else
         {
             startDelayTime = (float)stream.ReceiveNext();
             currentPlayerCount = (int)stream.ReceiveNext();
             currentLeftTime = (float)stream.ReceiveNext();
+            isGameStart = (bool)stream.ReceiveNext();
         }
     }
 
