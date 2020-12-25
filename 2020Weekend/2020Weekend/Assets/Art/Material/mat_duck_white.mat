@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_duck_white
+  m_Shader: {fileID: 4800000, guid: 0f36fd481064d014d834f76f02a00215, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Float0: -0.5
+    - _RimScale: 0.9
+    - _Rimbias: 0
+    - _Rimpower: 2.59
+    - __dirty: 0
+    - _outlinewidth: 0.05
+    m_Colors:
+    - _FresnelColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
+    - _SpecColor: {r: 0.6415094, g: 0.5719117, b: 0.5719117, a: 0}
+    - _Tint: {r: 0.6792453, g: 0.6247775, b: 0.6247775, a: 0}
+    - _outlinecolor: {r: 0.4056604, g: 0.10036665, b: 0.051664297, a: 0}
+    - _spectint: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
