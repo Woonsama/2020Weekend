@@ -704,7 +704,6 @@ GameObject:
   - component: {fileID: 1547384626654878708}
   - component: {fileID: -3353370967432343241}
   - component: {fileID: 5636249289553170266}
-  - component: {fileID: -2006919765083112312}
   m_Layer: 0
   m_Name: BearWhite
   m_TagString: Player
@@ -789,7 +788,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: isMove
+  - Type: 4
+    SynchronizeType: 0
+    Name: IsJump
+  - Type: 4
+    SynchronizeType: 0
+    Name: isDoubleJump
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -841,20 +849,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
---- !u!136 &-2006919765083112312
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837191043506314131}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.85754156
-  m_Height: 4.037342
-  m_Direction: 1
-  m_Center: {x: 0.014499426, y: 2, z: 0}
 --- !u!1 &4076523580513201367
 GameObject:
   m_ObjectHideFlags: 0
