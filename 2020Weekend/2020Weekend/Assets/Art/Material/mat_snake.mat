@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mat_monkey_brown
-  m_Shader: {fileID: 4800000, guid: 0f36fd481064d014d834f76f02a00215, type: 3}
+  m_Name: mat_snake
+  m_Shader: {fileID: 4800000, guid: 6848c9f51f05ae1409942f21c8672a08, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2ba4e53c3842509459f01975c6d8ea00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -28,15 +28,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Float0: -0.5
-    - _RimScale: 0.9
-    - _Rimbias: 0
-    - _Rimpower: 2.59
+    - _Float0: -0.18
+    - _RimScale: 0.46
+    - _Rimbias: -0.1
+    - _Rimpower: 2.48
     - __dirty: 0
     - _outlinewidth: 0.05
     m_Colors:
-    - _FresnelColor: {r: 0.7075472, g: 0.43397748, b: 0.36378607, a: 0}
+    - _FresnelColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0}
     - _SpecColor: {r: 0.6415094, g: 0.5719117, b: 0.5719117, a: 0}
-    - _Tint: {r: 0.1981132, g: 0.0670501, b: 0.023362402, a: 0}
-    - _outlinecolor: {r: 0.5471698, g: 0.15744035, b: 0.18729904, a: 0}
-    - _spectint: {r: 0.2924528, g: 0.16002135, b: 0.040005345, a: 0}
+    - _Tint: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
+    - _outlinecolor: {r: 0.4056604, g: 0.10036665, b: 0.051664297, a: 0}
+    - _spectint: {r: 0.41395834, g: 0.5188679, b: 0.34020114, a: 0}
