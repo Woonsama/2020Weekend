@@ -1474,6 +1474,11 @@ GameObject:
   - component: {fileID: 3207050513311329695}
   - component: {fileID: -4760431337554155191}
   - component: {fileID: 1102288516409168546}
+  - component: {fileID: -1672815096414402469}
+  - component: {fileID: 3902228208460239685}
+  - component: {fileID: 4834189346797755153}
+  - component: {fileID: -8298264522792502822}
+  - component: {fileID: 9157591450319625512}
   m_Layer: 0
   m_Name: char_monkey
   m_TagString: Untagged
@@ -1539,6 +1544,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 1102288516409168546}
+  - {fileID: 3902228208460239685}
+  - {fileID: -8298264522792502822}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1556,8 +1563,110 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: Angry
+  - Type: 4
+    SynchronizeType: 0
+    Name: Dance
+  - Type: 4
+    SynchronizeType: 0
+    Name: Frustrate
+  - Type: 4
+    SynchronizeType: 0
+    Name: Idle
+  - Type: 4
+    SynchronizeType: 0
+    Name: Jump
+  - Type: 4
+    SynchronizeType: 0
+    Name: Knock
+  - Type: 4
+    SynchronizeType: 0
+    Name: Run
+  - Type: 4
+    SynchronizeType: 0
+    Name: Victory
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
+--- !u!114 &-1672815096414402469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcab51cc2c226734d9399c5564d26de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpPower: 16
+--- !u!114 &3902228208460239685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!54 &4834189346797755153
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-8298264522792502822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
+--- !u!136 &9157591450319625512
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154408188438539615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.85035324
+  m_Height: 3.9470859
+  m_Direction: 1
+  m_Center: {x: -0.003814578, y: 1.9942167, z: 0}
 --- !u!1 &8447281618567836774
 GameObject:
   m_ObjectHideFlags: 0

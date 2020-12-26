@@ -10,12 +10,11 @@ public class InGameManager : MonoBehaviourPun
 
     private PhotonView pv;
 
-
     private void Awake()
     {
         pv = GetComponent<PhotonView>();
         CreatePlayer();
-        SetMainCameraFalse();
+        SetMainCamera();
         //pv.RPC("CreatePlayer", RpcTarget.AllBuffered);
         //pv.RPC("SetMainCameraFalse", RpcTarget.AllBuffered);
     }
@@ -27,8 +26,9 @@ public class InGameManager : MonoBehaviourPun
     }
 
     //[PunRPC]
-    private void SetMainCameraFalse()
+    private void SetMainCamera()
     {
+
         mainCamera.gameObject.SetActive(false);
     }
 }
