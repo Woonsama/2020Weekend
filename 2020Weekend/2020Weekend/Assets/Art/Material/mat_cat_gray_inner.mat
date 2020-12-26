@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mat_cat_gray
+  m_Name: mat_cat_gray_inner
   m_Shader: {fileID: 4800000, guid: 0f36fd481064d014d834f76f02a00215, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
@@ -31,4 +31,4 @@ Material:
     - _SpecColor: {r: 0.6415094, g: 0.5719117, b: 0.5719117, a: 0}
     - _Tint: {r: 0.15819687, g: 0.24663408, b: 0.4245283, a: 0}
     - _outlinecolor: {r: 0.4056604, g: 0.10036665, b: 0.051664297, a: 0}
-    - _spectint: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0}
+    - _spectint: {r: 0.509434, g: 0.50222504, b: 0.50222504, a: 0}

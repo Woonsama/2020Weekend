@@ -20,13 +20,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - _Float0: -1.04
-    - _RimScale: 0.42
+    - _Float0: -0.5
+    - _RimScale: 0.9
     - _Rimbias: 0
-    - _Rimpower: 4.38
+    - _Rimpower: 2.59
     - __dirty: 0
     m_Colors:
-    - _FresnelColor: {r: 0.3584906, g: 0.23923078, b: 0.17417233, a: 0}
+    - _FresnelColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0}
     - _SpecColor: {r: 0.6415094, g: 0.5719117, b: 0.5719117, a: 0}
-    - _Tint: {r: 0.59072983, g: 0.48883057, b: 0.6132076, a: 0}
-    - _spectint: {r: 0.6320754, g: 0.45616764, b: 0.6033558, a: 0}
+    - _Tint: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
+    - _spectint: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
