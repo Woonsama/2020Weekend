@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2549334683633763541}
   - component: {fileID: 4972475205274508756}
+  - component: {fileID: 1918674906977067660}
+  - component: {fileID: 9076892284695065457}
   m_Layer: 0
   m_Name: CameraManager
   m_TagString: Untagged
@@ -47,8 +49,8 @@ MonoBehaviour:
   camSpeed: 10
   camOffsetY: 3.5
   camOffsetZ: -11
-  cam: {fileID: 657875465213705586}
-  player: {fileID: 0}
+  cam: {fileID: 8616051578294977508}
+  player: {fileID: 657875465213705586}
   playerAxis: {fileID: 8616051578595832332}
   playerMoveSpeed: 10
   jumpPower: 13
@@ -58,6 +60,46 @@ MonoBehaviour:
     particle_Jump: {fileID: 4401330264483887652, guid: 00af0b33e7ce35841bfdced5b7a9b105,
       type: 3}
   pv: {fileID: 0}
+--- !u!114 &1918674906977067660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818903340840277422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 4972475205274508756}
+  - {fileID: 9076892284695065457}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &9076892284695065457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818903340840277422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &8616051577612133696
 GameObject:
   m_ObjectHideFlags: 0

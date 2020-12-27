@@ -8,6 +8,8 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
     private const int c_Max_JumpCount = 2;
 
+    [Header("테스트")]
+    public bool isTest;   
 
     public Transform centralAxis;
     public float camSpeed;
@@ -42,7 +44,7 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 
     private void Update()
     {
-        if(pv.IsMine)
+        if(pv.IsMine || isTest)
         {
             CamMove();
             Zoom();
@@ -55,7 +57,7 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
         }
         else
         {
-            if (cam.GetComponent<PhotonView>().IsMine)
+            if (cam.GetComponent<PhotonView>().IsMine || isTest)
                 cam.gameObject.SetActive(true);
             else
                 cam.gameObject.SetActive(false);
@@ -64,13 +66,45 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 
     private void FixedUpdate()
     {
-        if(pv.IsMine && GetComponent<PhotonView>().IsMine)
+        if(pv.IsMine && GetComponent<PhotonView>().IsMine || isTest)
         {
             JumpRayCheck();
 
-            if (isJumpButtonPressed)
+            if (isJumpButtonPressed && !isTest)
             {
                 pv.RPC("Jump", RpcTarget.AllBuffered);
+            }
+            else if(isJumpButtonPressed && isTest)
+            {
+                if (player.GetComponent<PhotonView>().IsMine || isTest)
+                {
+                    if (currentJumpCount < c_Max_JumpCount)
+                    {
+                        isJumpButtonPressed = false;
+                        OffRay_Jump();
+                        if (currentJumpCount == 0)
+                        {
+                            player.GetComponent<Animator>().SetBool("IsJump", true);
+                        }
+                        else
+                        {
+                            player.GetComponent<Animator>().SetBool("IsDoubleJump", true);
+                            player.GetComponent<Animator>().SetBool("IsJump", false);
+                        }
+                        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        player.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+                        currentJumpCount++;
+
+                        Invoke("OnRay_Jump", 0.5f);
+
+                        //Sound
+                        player.transform.root.GetChild(1).GetChild(0).GetChild(player.transform.root.GetChild(1).GetChild(0).childCount - 1).GetComponent<AudioSource>().PlayOneShot(playerClips.clip_Jump);
+
+                        //Particle
+                        ParticleSystem temp_Particle = Instantiate(playerParticles.particle_Jump, player.transform.root.GetChild(1).GetChild(0).position, Quaternion.identity);
+                        temp_Particle.Play();
+                    }
+                }
             }
         }
     }
@@ -78,7 +112,7 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
     private void LateUpdate()
     {
         // 카메라 중심축이 플레이어 따라다니기
-        if(pv.IsMine && cam.GetComponent<PhotonView>().IsMine)
+        if(pv.IsMine && cam.GetComponent<PhotonView>().IsMine || isTest)
         centralAxis.position = new Vector3(player.transform.position.x, 0.5f, player.transform.position.z);
     }
 
@@ -92,7 +126,7 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 
         if(Input.GetMouseButton(0))
         {
-            if(pv.IsMine && centralAxis.GetComponent<PhotonView>().IsMine)
+            if(pv.IsMine && centralAxis.GetComponent<PhotonView>().IsMine || isTest)
             {
                 mouseX += Input.GetAxis("Mouse X");
                 mouseY += Input.GetAxis("Mouse Y") * -1;
@@ -106,13 +140,13 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
         }
 
         //Rotate By Cam
-        if(pv.IsMine && playerAxis.GetComponent<PhotonView>().IsMine)
+        if(pv.IsMine && playerAxis.GetComponent<PhotonView>().IsMine || isTest)
         playerAxis.eulerAngles = new Vector3(playerAxis.eulerAngles.x, centralAxis.eulerAngles.y, playerAxis.eulerAngles.z);
     }
 
     private void Zoom()
     {
-        if(pv.IsMine && cam.GetComponent<PhotonView>().IsMine)
+        if(pv.IsMine && cam.GetComponent<PhotonView>().IsMine || isTest)
         {
             wheel += Input.GetAxis("Mouse ScrollWheel");
             if (wheel >= -1)
@@ -126,7 +160,7 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 
     private void PlayerMove()
     {
-        if(pv.IsMine && player.GetComponent<PhotonView>().IsMine)
+        if(pv.IsMine && player.GetComponent<PhotonView>().IsMine || isTest)
         {
             float moveX = Input.GetAxis("Horizontal");
             float moveY = Input.GetAxis("Vertical");
@@ -151,7 +185,7 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 
     private void JumpRayCheck()
     {
-        if(player.GetComponent<PhotonView>().IsMine)
+        if(player.GetComponent<PhotonView>().IsMine || isTest)
         {
             RaycastHit hit;
 
@@ -174,18 +208,18 @@ public class CamMovement : MonoBehaviourPunCallbacks, IPunObservable
 
     private void OnRay_Jump()
     {
-        if(pv.IsMine) isRayOn = true;
+        if(pv.IsMine || isTest) isRayOn = true;
     }
 
     private void OffRay_Jump()
     {
-        if(pv.IsMine) isRayOn = false;
+        if(pv.IsMine || isTest) isRayOn = false;
     }
 
     [PunRPC]
     private void Jump()
     {
-        if (player.GetComponent<PhotonView>().IsMine)
+        if (player.GetComponent<PhotonView>().IsMine || isTest)
         {
             if (currentJumpCount < c_Max_JumpCount)
             {

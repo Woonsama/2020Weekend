@@ -27,6 +27,7 @@ public class InGameManager : MonoBehaviourPun
 
     private void Awake()
     {
+
         pv = GetComponent<PhotonView>();
         CreatePlayer();
        //if(pv.IsMine)
@@ -91,10 +92,8 @@ public class InGameManager : MonoBehaviourPun
 
     private void ResetPlayerPosition()
     {
-        if(target.GetComponent<PhotonView>().IsMine)
+        if (target.GetComponent<PhotonView>().IsMine)
         {
-            //Debug.Log("Reset");
-            //Debug.Log(target.transform.GetChild(1).name);
             target.transform.root.GetChild(1).GetChild(0).localPosition = new Vector3(0,2,0);
             target.transform.GetChild(1).localPosition = randomPosition;
         }
