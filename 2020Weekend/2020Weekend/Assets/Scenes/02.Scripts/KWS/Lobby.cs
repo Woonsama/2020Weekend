@@ -115,7 +115,7 @@ public class Lobby : MonoBehaviourPunCallbacks, IPunObservable
     private void GoToGameScene()
     {
         Destroy(GameObject.Find("TitleAndLobbySource"));
-        PhotonNetwork.LoadLevel("test_2");
+        PhotonNetwork.LoadLevel("Level_6");
     }
 
     #endregion private

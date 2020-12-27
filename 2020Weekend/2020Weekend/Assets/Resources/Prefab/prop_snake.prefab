@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3534078032105076272}
   - component: {fileID: 986082832109613587}
+  - component: {fileID: 1477718036327751734}
   m_Layer: 0
   m_Name: bx_snake04
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   - {fileID: 7274305824902109931}
   m_Father: {fileID: 5817825971857441652}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.0002486837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.00013660379}
 --- !u!65 &986082832109613587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40,11 +41,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2847008824657938612}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 28.7, y: 13.05, z: -5.68}
   m_Center: {x: 0, y: -1.13, z: 2.25}
+--- !u!114 &1477718036327751734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847008824657938612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219bbb0d9c7ab0b408ebb2099210b242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {x: 10, y: 10, z: 10}
 --- !u!1 &3294591761692583841
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5817825971857441652}
   - component: {fileID: 5724071066821678797}
+  - component: {fileID: 8871256929845971394}
   m_Layer: 0
   m_Name: bx_snake03
   m_TagString: Untagged
@@ -76,7 +91,7 @@ Transform:
   - {fileID: 3534078032105076272}
   m_Father: {fileID: 4111092785332632914}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.9740233e-13, y: 0.0000018004953, z: 82.8796}
+  m_LocalEulerAnglesHint: {x: -3.9342685e-13, y: 0.0000024148364, z: 0.00013660379}
 --- !u!65 &5724071066821678797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85,11 +100,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3294591761692583841}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 33.5, y: 15.69, z: -5.68}
   m_Center: {x: 0, y: -1.13, z: 2.77}
+--- !u!114 &8871256929845971394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3294591761692583841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219bbb0d9c7ab0b408ebb2099210b242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {x: 10, y: 10, z: 10}
 --- !u!1 &3728380049753842992
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7274305824902109931}
   - component: {fileID: 5709504612965372453}
+  - component: {fileID: 1929735557450971584}
   m_Layer: 0
   m_Name: bx_snake05
   m_TagString: Untagged
@@ -120,7 +149,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3534078032105076272}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.78352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 115}
 --- !u!65 &5709504612965372453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,11 +158,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3728380049753842992}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7, y: 23.11, z: -4.4}
   m_Center: {x: 0, y: -1.13, z: 1.82}
+--- !u!114 &1929735557450971584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3728380049753842992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219bbb0d9c7ab0b408ebb2099210b242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {x: 10, y: 10, z: 10}
 --- !u!1 &6983104450012732213
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902949873026076608}
   - component: {fileID: 2266240620165932642}
+  - component: {fileID: 5261985479237580050}
   m_Layer: 0
   m_Name: bx_snake00
   m_TagString: Untagged
@@ -165,7 +208,7 @@ Transform:
   - {fileID: 6272776349611215723}
   m_Father: {fileID: 8986858692474913126}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.975105, y: 120.036865, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.972015, y: -102.687744, z: 0}
 --- !u!65 &2266240620165932642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -174,11 +217,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6983104450012732213}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 43.57, y: 15.4, z: -5.68}
   m_Center: {x: -12.23, y: -2.44, z: 3.02}
+--- !u!114 &5261985479237580050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983104450012732213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219bbb0d9c7ab0b408ebb2099210b242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {x: 10, y: 10, z: 10}
 --- !u!1 &7226885273929351682
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4111092785332632914}
   - component: {fileID: 2169504768677395072}
+  - component: {fileID: 4412098310432411161}
   m_Layer: 0
   m_Name: bx_snake02
   m_TagString: Untagged
@@ -210,7 +267,7 @@ Transform:
   - {fileID: 5817825971857441652}
   m_Father: {fileID: 6272776349611215723}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.0000019591444, y: 0.00000001400554, z: 7.1203957}
+  m_LocalEulerAnglesHint: {x: 0.0000024148364, y: 6.106665e-13, z: 7.124442e-13}
 --- !u!65 &2169504768677395072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -219,11 +276,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7226885273929351682}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 32.97, y: 15.02, z: -5.68}
   m_Center: {x: 0, y: -2.44, z: 3.02}
+--- !u!114 &4412098310432411161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7226885273929351682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219bbb0d9c7ab0b408ebb2099210b242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {x: 10, y: 10, z: 10}
 --- !u!1 &8645905168349076444
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8986858692474913126}
   - component: {fileID: 7342821894996563368}
+  - component: {fileID: 644557658559397540}
   m_Layer: 0
   m_Name: prop_snake
   m_TagString: Untagged
@@ -275,6 +346,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &644557658559397540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645905168349076444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aeaee5b8feab8740899dcf7aadb6ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSnakeSpeed: 1
+  accelerationSnakeSpeed: 0.05
 --- !u!1 &8964958212637499524
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6272776349611215723}
   - component: {fileID: 6612669586552865356}
+  - component: {fileID: 5871059360248524347}
   m_Layer: 0
   m_Name: bx_snake01
   m_TagString: Untagged
@@ -307,7 +393,7 @@ Transform:
   - {fileID: 4111092785332632914}
   m_Father: {fileID: 902949873026076608}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.0000017079765, y: -0.0000039464553, z: 59.963127}
+  m_LocalEulerAnglesHint: {x: -0.0000018254797, y: -0.000002886258, z: 12.68775}
 --- !u!65 &6612669586552865356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -316,11 +402,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8964958212637499524}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 43, y: 15.02, z: -5.68}
   m_Center: {x: -4.5, y: -2.44, z: 3.02}
+--- !u!114 &5871059360248524347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964958212637499524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219bbb0d9c7ab0b408ebb2099210b242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {x: 10, y: 10, z: 10}
 --- !u!1 &9018575890424128864
 GameObject:
   m_ObjectHideFlags: 0

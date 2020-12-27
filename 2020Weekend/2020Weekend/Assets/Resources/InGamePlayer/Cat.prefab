@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7569271956447748856}
   m_Layer: 0
   m_Name: upperarm_r_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 5931267928399236580}
   m_Layer: 0
   m_Name: Character_LThigh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 5564014909774163515}
   m_Layer: 0
   m_Name: Character_RCollarbone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,8 +117,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913646686815188952}
-  - component: {fileID: 5507496973789638050}
   - component: {fileID: 4156774898125539295}
+  - component: {fileID: 5507496973789638050}
   - component: {fileID: 4043434627724727953}
   - component: {fileID: 4500196535065797988}
   - component: {fileID: 3524186035353934678}
@@ -146,9 +146,26 @@ Transform:
   - {fileID: 5681385591154285853}
   - {fileID: 7253669111398204115}
   - {fileID: 5797886200567721773}
+  - {fileID: 2184767047661814579}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &4156774898125539295
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280556290254876002}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!95 &5507496973789638050
 Animator:
   serializedVersion: 3
@@ -168,22 +185,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &4156774898125539295
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280556290254876002}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &4043434627724727953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,13 +258,13 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isMove
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: IsJump
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isDoubleJump
   m_SynchronizeLayers:
   - SynchronizeType: 0
@@ -280,7 +281,7 @@ GameObject:
   - component: {fileID: 839258992884796769}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,7 +395,7 @@ GameObject:
   - component: {fileID: 5797886200567721773}
   m_Layer: 0
   m_Name: Character_RPlatform
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,7 +425,7 @@ GameObject:
   - component: {fileID: 3400220892898463169}
   m_Layer: 0
   m_Name: Character_Spine1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,7 +457,7 @@ GameObject:
   - component: {fileID: 6275396253910900162}
   m_Layer: 0
   m_Name: Character_LFoot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,7 +489,7 @@ GameObject:
   - component: {fileID: 1485111889752433476}
   m_Layer: 0
   m_Name: Character_LDigit21
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,7 +520,7 @@ GameObject:
   - component: {fileID: 3725620181209794983}
   m_Layer: 0
   m_Name: Character_RThigh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +552,7 @@ GameObject:
   - component: {fileID: 3710214009927084864}
   m_Layer: 0
   m_Name: Character_LUpperarm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -572,6 +573,133 @@ Transform:
   m_Father: {fileID: 1103990850112717435}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2664820885069024519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2184767047661814579}
+  - component: {fileID: 6247983102283913821}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2184767047661814579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664820885069024519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1913646686815188952}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &6247983102283913821
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664820885069024519}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2746108892932727176
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +711,7 @@ GameObject:
   - component: {fileID: 1733070896998781870}
   m_Layer: 0
   m_Name: Character_RDigit22
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,7 +742,7 @@ GameObject:
   - component: {fileID: 5971545441639497466}
   m_Layer: 0
   m_Name: Character_FootBone001
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +773,7 @@ GameObject:
   - component: {fileID: 8364942297113663058}
   m_Layer: 0
   m_Name: thigh_r_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +817,7 @@ GameObject:
   - component: {fileID: 3587934823727330898}
   m_Layer: 0
   m_Name: Character_LDigit12
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,7 +848,7 @@ GameObject:
   - component: {fileID: 5656074710609863614}
   m_Layer: 0
   m_Name: upperarm_l_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,7 +892,7 @@ GameObject:
   - component: {fileID: 1485928423957200482}
   m_Layer: 0
   m_Name: Character_
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,7 +922,7 @@ GameObject:
   - component: {fileID: 3433511669371698495}
   m_Layer: 0
   m_Name: Character_RDigit12
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -824,7 +952,7 @@ GameObject:
   - component: {fileID: 1103990850112717435}
   m_Layer: 0
   m_Name: Character_LCollarbone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,7 +983,7 @@ GameObject:
   - component: {fileID: 1214274029639474296}
   m_Layer: 0
   m_Name: Character_FootBone001 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +1014,7 @@ GameObject:
   - component: {fileID: 6738539735538437788}
   m_Layer: 0
   m_Name: forearm_r_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -931,7 +1059,7 @@ GameObject:
   - component: {fileID: 3440023886084215919}
   m_Layer: 0
   m_Name: foot_l_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,7 +1104,7 @@ GameObject:
   - component: {fileID: 5108805795523103202}
   m_Layer: 0
   m_Name: forearm_l_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1020,7 +1148,7 @@ GameObject:
   - component: {fileID: 5045779370094464373}
   m_Layer: 0
   m_Name: Character_LPalm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1053,7 +1181,7 @@ GameObject:
   - component: {fileID: 2026340272617914769}
   m_Layer: 0
   m_Name: thigh_l_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,7 +1226,7 @@ GameObject:
   - component: {fileID: 3703317463774258017}
   m_Layer: 0
   m_Name: head_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,7 +1270,7 @@ GameObject:
   - component: {fileID: 698941379178054066}
   m_Layer: 0
   m_Name: Character_RPalm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1174,7 +1302,7 @@ GameObject:
   - component: {fileID: 3763052092441142752}
   m_Layer: 0
   m_Name: Character_LDigit11
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1333,7 @@ GameObject:
   - component: {fileID: 3945352573180515995}
   m_Layer: 0
   m_Name: Character_Neck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1236,7 +1364,7 @@ GameObject:
   - component: {fileID: 517345126717569185}
   m_Layer: 0
   m_Name: Character_RDigit11
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1268,7 +1396,7 @@ GameObject:
   - component: {fileID: 7882419390515691473}
   m_Layer: 0
   m_Name: body_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1312,7 +1440,7 @@ GameObject:
   - component: {fileID: 665857406718450062}
   m_Layer: 0
   m_Name: Character_LDigit22
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,7 +1471,7 @@ GameObject:
   - component: {fileID: 1963138465944568928}
   m_Layer: 0
   m_Name: Character_RCalf
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1375,7 +1503,7 @@ GameObject:
   - component: {fileID: 2673312132405306949}
   m_Layer: 0
   m_Name: Character_LCalf
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,7 +1535,7 @@ GameObject:
   - component: {fileID: 1792082892710031085}
   m_Layer: 0
   m_Name: Character_Spine2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1438,7 +1566,7 @@ GameObject:
   - component: {fileID: 7763118342752313496}
   m_Layer: 0
   m_Name: Character_RFoot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,7 +1598,7 @@ GameObject:
   - component: {fileID: 4238899441788953550}
   m_Layer: 0
   m_Name: Character_RUpperarm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,7 +1631,7 @@ GameObject:
   - component: {fileID: 2497057546629913209}
   m_Layer: 0
   m_Name: foot_r_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1548,7 +1676,7 @@ GameObject:
   - component: {fileID: 5170363639181384650}
   m_Layer: 0
   m_Name: hand_r_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1592,7 +1720,7 @@ GameObject:
   - component: {fileID: 3235951014087847943}
   m_Layer: 0
   m_Name: Character_LForearm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1624,7 +1752,7 @@ GameObject:
   - component: {fileID: 7253669111398204115}
   m_Layer: 0
   m_Name: Character_Pelvis
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1657,7 +1785,7 @@ GameObject:
   - component: {fileID: 4872563439342120867}
   m_Layer: 0
   m_Name: Character_Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1689,7 +1817,7 @@ GameObject:
   - component: {fileID: 7651965253400677177}
   m_Layer: 0
   m_Name: calf_r_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1734,7 +1862,7 @@ GameObject:
   - component: {fileID: 1165884397123516960}
   m_Layer: 0
   m_Name: calf_l_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1779,7 +1907,7 @@ GameObject:
   - component: {fileID: 3640177190895010744}
   m_Layer: 0
   m_Name: hand_l_collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1823,7 +1951,7 @@ GameObject:
   - component: {fileID: 5681385591154285853}
   m_Layer: 0
   m_Name: Character_LPlatform
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1853,7 +1981,7 @@ GameObject:
   - component: {fileID: 5890898718486674659}
   m_Layer: 0
   m_Name: Character_Ribcage
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1887,7 +2015,7 @@ GameObject:
   - component: {fileID: 3891591203167596929}
   m_Layer: 0
   m_Name: Character_RDigit21
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1918,7 +2046,7 @@ GameObject:
   - component: {fileID: 4335694532038515866}
   m_Layer: 0
   m_Name: Character_RForearm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

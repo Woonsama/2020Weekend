@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/01.Scenes/test_2.unity
-    guid: 205a536bae527d3449de43b512d9d02a
+    path: Assets/Scenes/01.Scenes/Kws/Kws_Title_Test.unity
+    guid: c0cbf6779fd2f0045baec97cd94a16fa
+  - enabled: 1
+    path: Assets/Scenes/01.Scenes/Kws/LobbyTest.unity
+    guid: 63adf25ce8dd08149a26f3252b2595d7
+  - enabled: 1
+    path: Assets/Scenes/01.Scenes/Customize.unity
+    guid: 51fb7c8f007ed614685e2fefc9275b48
+  - enabled: 1
+    path: Assets/Scenes/01.Scenes/Level_2.unity
+    guid: 54fb2fc71087349499b400c9e9c14ea1
+  - enabled: 1
+    path: Assets/Scenes/01.Scenes/level_6.unity
+    guid: 18f67cff16aa6f641b57bc92e14b3331
   m_configObjects: {}
